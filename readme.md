@@ -11,7 +11,9 @@ the Free Software Foundation; either version 3 of the License, or
 
 ## Users
 
-This script requires skin support and a working youtube plugin
+This script requires skin support and a working youtube plugin.  It also requires that your music
+files have been tagged with musicbrainz ID's, at the very least the artist and track MBIDs.  The scanner
+*can* work to a certain degree without track MBIDs but it won't work at all without artist MBIDs.
 
 ## Skinners
 
