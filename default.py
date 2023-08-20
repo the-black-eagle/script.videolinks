@@ -28,7 +28,7 @@ LANGUAGE = xbmcaddon.Addon().getLocalizedString
 
 if len(sys.argv) == 2:
     artist_id = sys.argv[1]
-    log(LANGUAGE(30005) + "{}".format(artist_id), xbmc.LOGINFO)
+    log(LANGUAGE(30005) + " {}".format(artist_id), xbmc.LOGINFO)
     single_artist(artist_id)
 else:
     log(LANGUAGE(30007), xbmc.LOGINFO)
