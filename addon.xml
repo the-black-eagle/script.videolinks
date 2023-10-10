@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.videolinks"
        name="Video link scraper"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="black_eagle">
   <requires>
       <import addon="xbmc.python" version="3.0.0"/>
@@ -16,6 +16,7 @@
     <description lang="en_GB">Search TheAudioDB for video links for each artist in your music database and add any matching links so you can watch the videos for songs you already have in your music db.  Needs skin support and a working YouTube plugin</description>
     <description lang="pt_BR">Pesquise no TheAudioDB links de vídeo para cada artista em seu banco de dados de música e adicione quaisquer links correspondentes para que você possa assistir aos vídeos das músicas que já possui em seu banco de dados de música. Precisa de suporte de skin e um plugin do YouTube funcional</description>
     <news>
+    v1.0.3 - Fix adding art to art table, add toast notification for single artists
     v1.0.2 - Portuguese (Brazil) Translation
     v1.0.1 - Improve error handling, update URL's for new youtube plugin format
     </news>
