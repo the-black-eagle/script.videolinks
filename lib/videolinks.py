@@ -83,12 +83,12 @@ def update_songs(songstoupdate):
         rpc_string = (
             '{"jsonrpc":"2.0","id":1,"method":"audioLibrary.SetSongDetails", \
              "params":{"songid":' + str(songid) + ',\
-             "songvideourl": "' + vidurl + '"}')
+             "songvideourl": "' + vidurl + '"')
         if have_art:
             rpc_string = (
-                rpc_string + ', "art": {"videothumb": "' + vidthumb + '"}}')
+                rpc_string + ', "art": {"videothumb": "' + vidthumb + '"}}}')
         else:
-            rpc_string = rpc_string + '}'
+            rpc_string = rpc_string + '}}'
 
         res = xbmc.executeJSONRPC(rpc_string)
         result = json.loads(res)
@@ -203,6 +203,7 @@ def process_all_artists():
 
 
 def single_artist(artist_id):
+    xbmcgui.Dialog().notification(LANGUAGE(30000), LANGUAGE(30012), ICON, 2000)
     response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1,\
     "method": "AudioLibrary.GetArtistDetails","params":{"artistid":'
                                    + artist_id +
@@ -219,6 +220,7 @@ def single_artist(artist_id):
     mvidlist = mvid_data.get('mvids', [])
     if mvidlist:
         match_mvids_to_songs(mvidlist, songlist)
+    xbmcgui.Dialog().notification(LANGUAGE(30000), LANGUAGE(30018), ICON, 2000)
 
 
 def exit_on_error(the_error):
